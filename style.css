@@ -1,0 +1,122 @@
+:root {
+  --primary: #000622;
+  --sekunder: #ffa31a;
+}
+
+* {
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: var(--primary);
+}
+.input-search {
+  width: 450px;
+  height: 25px;
+  margin: 10px 15px 10px 50px;
+  border-radius: 13px;
+  -webkit-border-radius: 13px;
+  -moz-border-radius: 13px;
+  -ms-border-radius: 13px;
+  -o-border-radius: 13px;
+  font-family: "poppins";
+  font-style: italic;
+  text-decoration: none;
+  border: none;
+  background-color: #cfcfcfd9;
+  padding: 15px;
+}
+.search-button {
+  width: 70px;
+  height: 25px;
+  font-family: "poppins";
+  font-weight: 500;
+  border: none;
+  border-radius: 12px;
+  background-color: #ffa31a;
+  color: var(--primary);
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  margin-right: 120px;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 90px;
+  padding: 20px;
+  background-color: rgba(37, 58, 97, 0.75);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.navbar .navbar-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar .navbar-logo {
+  font-size: 30px;
+  font-weight: bold;
+  font-style: italic;
+  color: rgb(204, 205, 205);
+  margin: 10px 10px 10px 70px;
+}
+
+.navbar .navbar-logo span {
+  color: #ffa31a;
+}
+
+.navbar .navbar-menu a {
+  color: #ffffff;
+  font-weight: 700;
+  margin-right: 50px;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.navbar .navbar-menu a:hover {
+  color: var(--sekunder);
+  transform: scale(1.1);
+  text-shadow: 0 0 5px rgba(201, 201, 201, 0.3);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
+.hero-slide {
+  margin: 150px 20px 0 20px;
+  background-size: cover;
+  background-color: rgba(37, 58, 97, 0.75);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.hero-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  max-width: 150%;
+  height: auto;
+}
+
+.caption {
+  position: absolute;
+  bottom: 4px;
+  left: 200px;
+}
