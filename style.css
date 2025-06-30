@@ -120,3 +120,57 @@ body {
   bottom: 4px;
   left: 200px;
 }
+
+.container-login{
+  background-color: antiquewhite;
+  width: 350px;
+  padding: 10px;
+  margin: 5% auto;
+  box-shadow: 1px 1px 2.5px rgba( 0, 0, 0, .3);
+  border-radius: 15px;
+  text-align: center;
+}
+
+a img{
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.container-login h2{
+  text-align: center;
+  color: var(--sekunder);
+  text-shadow: 1px 2px 1px black;
+}
+
+.container-login input{
+  border: none;
+  margin: 10px 0;
+  border-bottom: 2px solid #000;
+  background: transparent;
+  outline: none;
+  width: 250px;
+}
+.container-login button{
+  width: 25%;
+  background-color: var(--sekunder);
+  border: none;
+  border-radius: 2.5px;
+  cursor: pointer;
+  color: #27325D;
+  margin: 10px 0;
+}
+
+.container-login button:hover{
+  background-color: darkorange;
+}
+
+.container-login a{
+  color: var(--sekunder);
+  font-size: 14px;
+}
+
+.container-login a span{
+  color:#ffffff; 
+}
