@@ -117,8 +117,11 @@ body {
 
 .caption {
   position: absolute;
-  bottom: 4px;
-  left: 200px;
+  text-align: center;
+  color: var(--sekunder);
+  text-shadow: 1px 2px 3px #000;
+  font-size: x-large;
+  top: 100%;
 }
 
 .container-login{
@@ -133,10 +136,10 @@ body {
 
 .logo-login{
   text-align: center;
-  margin: 10% 0 10px 0 ;
+  margin: 8% 0 10px 0 ;
 }
 
-a img{
+.logo-login a img{
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -151,7 +154,7 @@ a img{
 .container-login input{
   border: none;
   margin: 10px 0;
-  border-bottom: 2px solid #000;
+  border-bottom: 2px solid rgba(201, 201, 201, 0.6);
   background: transparent;
   outline: none;
   width: 250px;
@@ -178,4 +181,46 @@ a img{
 
 .container-login a span{
   color:#ffffff; 
+}
+
+.garis-or{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: rgba(201, 201, 201, 0.6);
+  margin: 10px auto;
+  width: 250px;
+}
+
+.garis-or::before,
+.garis-or::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid gray;
+}
+
+.login-lain{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  padding-right: 12%;
+}
+
+.login-lain li{
+  align-items: center;
+  display: flex;
+  width: 50px;
+  height: 50px;
+  justify-content: center;
+  float: left;
+}
+
+.login-lain li a img{
+  width: 35px;
+  height: 35px;
+}
+
+.clear-login{
+  clear: both;
 }
