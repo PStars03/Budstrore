@@ -1,3 +1,61 @@
+let slideIndex = 0;
+const slides = document.querySelectorAll(".hero-img .slide");
+const dots = document.querySelectorAll(".dot");
+const prevButton = document.querySelector(".prev-slide");
+const nextButton = document.querySelector(".next-slide");
+let slideInterval;
+
+function showSlide(index) {
+  slides.forEach((slide) => slide.classList.remove("active"));
+  dots.forEach((dot) => dot.classList.remove("active"));
+
+  slideIndex = (index + slides.length) % slides.length;
+  slides[slideIndex].classList.add("active");
+  dots[slideIndex].classList.add("active");
+}
+
+function nextSlide() {
+  showSlide(slideIndex + 1);
+}
+
+function prevSlide() {
+  showSlide(slideIndex - 1);
+}
+
+function startAutoSlide() {
+  slideInterval = setInterval(() => {
+    nextSlide();
+  }, 3000);
+}
+
+function stopAutoSlide() {
+  clearInterval(slideInterval);
+}
+
+// event tombol
+prevButton.addEventListener("click", () => {
+  stopAutoSlide();
+  prevSlide();
+  startAutoSlide();
+});
+
+nextButton.addEventListener("click", () => {
+  stopAutoSlide();
+  nextSlide();
+  startAutoSlide();
+});
+
+// event klik titik navigasi
+dots.forEach((dot, i) => {
+  dot.addEventListener("click", () => {
+    stopAutoSlide();
+    showSlide(i);
+    startAutoSlide();
+  });
+});
+
+startAutoSlide();
+
 // Toggle class active untuk hamburger menu
 const navbarNav = document.querySelector(".navbar-nav");
 // ketika hamburger menu di klik
@@ -64,47 +122,3 @@ window.onclick = (e) => {
     itemDetailModal.style.display = "none";
   }
 };
-let slideIndex = 0;
-const slides = document.querySelectorAll(".hero-img .slide");
-const prevButton = document.querySelector(".prev-slide");
-const nextButton = document.querySelector(".next-slide");
-let slideInterval;
-
-function showSlide(index) {
-  slides.forEach((slide) => slide.classList.remove("active"));
-  slideIndex = (index + slides.length) % slides.length;
-  slides[slideIndex].classList.add("active");
-}
-
-function nextSlide() {
-  showSlide(slideIndex + 1);
-}
-
-function prevSlide() {
-  showSlide(slideIndex - 1);
-}
-
-function startAutoSlide() {
-  slideInterval = setInterval(() => {
-    nextSlide();
-  }, 3000);
-}
-
-function stopAutoSlide() {
-  clearInterval(slideInterval);
-}
-
-// tombol navigasi manual
-prevButton.addEventListener("click", () => {
-  stopAutoSlide();
-  prevSlide();
-  startAutoSlide();
-});
-
-nextButton.addEventListener("click", () => {
-  stopAutoSlide();
-  nextSlide();
-  startAutoSlide();
-});
-
-startAutoSlide(); // mulai auto slide
