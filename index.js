@@ -133,6 +133,7 @@ document
     const password = document.getElementById("password").value;
     const konfirmasiPassword =
       document.getElementById("konfirmasiPassword").value;
+    document.getElementById("konfirmasiPassword").value;
 
     const emailReg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   });
