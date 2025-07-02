@@ -122,3 +122,17 @@ window.onclick = (e) => {
     itemDetailModal.style.display = "none";
   }
 };
+
+// Register
+
+document
+  .getElementById("registerForm")
+  .addEventListener("submit", function (e) {
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value;
+    const konfirmasiPassword =
+      document.getElementById("konfirmasiPassword").value;
+
+    const emailReg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  });
