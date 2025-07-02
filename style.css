@@ -460,19 +460,19 @@ body {
   margin: auto;
 }
 
-.topbar {
+.card.id {
+  margin-top: 120px;
   background: #1e2b45;
-  padding: 1rem;
+  padding: 8px;
   border-radius: 10px;
-  text-align: center;
-  color: orange;
-  font-size: 1.5rem;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .card {
+  margin-left: 20px;
+  margin-right: 20px;
   background: #1e2b45;
-  padding: 1rem;
+  padding: 8px;
   border-radius: 10px;
   margin-bottom: 15px;
 }
@@ -489,7 +489,7 @@ body {
 }
 
 .input-idpemain {
-  width: 100%;
+  width: 98%;
   padding: 10px;
   border-radius: 8px;
   border: none;
