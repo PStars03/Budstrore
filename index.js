@@ -124,16 +124,81 @@ window.onclick = (e) => {
 };
 
 // Register
-
 document
   .getElementById("registerForm")
   .addEventListener("submit", function (e) {
-    const name = document.getElementById("name").value.trim();
+    e.preventDefault();
+
+    const nama = document.getElementById("nama").value.trim();
     const email = document.getElementById("email").value.trim();
     const password = document.getElementById("password").value;
-    const konfirmasiPassword =
-      document.getElementById("konfirmasiPassword").value;
-    document.getElementById("konfirmasiPassword").value;
+    const konfirmasi = document.getElementById("konfirmasiPassword").value;
 
     const emailReg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (name.length < 3) {
+      alert("Nama harus lebih dari 2 karakter!");
+      e.preventDefault();
+      return;
+    }
+
+    if (!emailReg.test(email)) {
+      alert("Email tidak valid!");
+      e.preventDefault();
+      return;
+    }
+
+    if (password.length < 8) {
+      alert("Passwordnya kurang panjang, minimal 8 karakter");
+      e.preventDefault();
+      return;
+    }
+
+    if (konfirmasiPassword !== password) {
+      alert(
+        "Password kamu beda nih, perbaiki lagi! perasan yang beda aja sakit😊💔💔"
+      );
+      e.preventDefault();
+      return;
+    }
+
+    const users = JSON.parse(localStorage.getItem("users")) || [];
+
+    const userExists = users.find((user) => user.email === email);
+    if (userExists) {
+      alert(
+        "Email sudah terdaftar! Sama kaya hati jangan sampai berisi dua orang💔"
+      );
+      return;
+    }
+
+    users.push({ nama, email, password });
+    localStorage.setItem("users", JSON.stringify(users));
+
+    alert(
+      "Selamat akun kamu sudah diterima, semoga perasanmu juga diterima sama dia🤗"
+    );
+    window.location.href = "login.html";
   });
+
+// Login
+document.querySelector("form").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const email = document.getElementById("email").value.trim();
+  const password = document.getElementById("password").value;
+
+  const users = JSON.parse(localStorage.getItem("users")) || [];
+
+  const validUser = users.find(
+    (user) => user.email === email && user.password === password
+  );
+
+  if (validUser) {
+    alert("Login berhasil, selamat datang " + validUser.nama + "!");
+    localStorage.setItem("loggedInUser", JSON.stringify(validUser));
+    window.location.href = "home.html";
+  } else {
+    alert("Email atau password salah!");
+  }
+});
