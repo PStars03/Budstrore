@@ -38,20 +38,25 @@
     <div class="container-register">
       <h2>Top up gampang, harga nggak bikin pusing Yuk, top up di Budstore sekarang!</h2>
       <div class="register-lain">
-        <ul>
-          <li><a href="#"><img src="asset/google.png" alt="google"><b>Lanjut dengan Google</b></a></li>
-          <li><a href="#"><img src="asset/gmail.png" alt="gmail"><b>Daftar dengan Gmail</b></a></button></li>
-          <li><a href="#"><img src="asset/facebook.png" alt="facebook"><b>Daftar dengan Facebook</b></a></li>
-          <div class="clear-login"></div>
-        </ul>
+
+        <form action="" id="registerForm" >
+          <input class="input-regiter" type="nama" id="nama" placeholder="Nama Lengkap..." required><br>
+          <input class="input-regiter" type="email" id="email" placeholder="Email..." required><br>
+          <input class="input-regiter" type="password" id="password" placeholder="Password..." required><br>
+          <input class="input-regiter" type="password" id="konfirmasiPassword" placeholder="Konfirmasi Password..." required><br>
+          <button type="submit">Daftar</button>
+        </form>
+        
+        <p>Dengan mendaftar, anda setuju dengan <a href="">Persyaratan Layanan</a> dan <a href="">Kebijakan Privasi.</a></p></li>
+        <hr><p>Sudah memiliki akun?</p>
+        <a href="login.html">Masuk</a>
       </div>
-      <p>Dengan mendaftar, anda setuju dengan <a href="">Persyaratan Layanan</a> dan <a href="">Kebijakan Privasi.</a></p></li>
-      <hr><p>Sudah memiliki akun?</p>
-      <a href="login.html">Masuk</a>
     </div>
 
     <script>
       feather.replace();
     </script>
+
+    <script src="index.js"></script>
   </body>
 </html>
