@@ -8,6 +8,10 @@
   font-family: "Poppins", sans-serif;
 }
 
+#hamburger-menu {
+  display: none;
+}
+
 body {
   background-color: var(--primary);
 }
@@ -45,8 +49,8 @@ body {
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  gap: 90px;
+  justify-content: space-between;
+  gap: 0px;
   padding: 20px;
   background-color: #12163a;
   position: fixed;
@@ -393,9 +397,24 @@ body {
 
 /* ==== RESPONSIVE DESIGN ==== */
 
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
 /* Tablet */
 @media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
   .navbar {
+    position: absolute;
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
@@ -403,12 +422,12 @@ body {
   }
 
   .input-search {
-    width: 100%;
+    width: 50%;
     margin: 10px 0;
   }
 
   .search-button {
-    width: 100%;
+    width: 50%;
     margin: 0;
   }
 

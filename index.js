@@ -1,3 +1,8 @@
+// Hamburger toggle
+document.getElementById("hamburger").addEventListener("click", () => {
+  document.getElementById("nav-links").classList.toggle("nav-active");
+});
+
 let slideIndex = 0;
 const slides = document.querySelectorAll(".hero-img .slide");
 const prevButton = document.querySelector(".prev-slide");
