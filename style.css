@@ -368,17 +368,26 @@ body {
   justify-content: center;
   width: 350px;
   color: #000;
-  background-color:rgba(201, 201, 201, 0.6) ;
+  background-color:rgba(201, 201, 201, 0.6);
   border-radius: 25px;
   gap: 10px;
   box-shadow: 2px 2px 3.5px #000;
 }
 
-.container-login p a{
+.container-register p a{
   color: #ffffff;
 }
 
 .register-lain li a img {
   width: 35px;
   height: 35px;
+}
+
+.container-register a{
+  color: #ffffff;
+}
+
+.container-register hr{
+  border: none;
+  border-top: 1px solid rgba(201, 201, 201, 0.6);
 }
