@@ -404,7 +404,7 @@ body {
 }
 
 /* Tablet */
-@media (max-width: 768px) {
+@media (max-width: 758px) {
   html {
     font-size: 62.5%;
   }
@@ -413,28 +413,44 @@ body {
     display: inline-block;
   }
 
-  .navbar {
+  .navbar .navbar-nav {
     position: absolute;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 10px 20px;
+    top: 100%;
+    right: -100%;
+    background-color: var(--primary);
+    color: #ffffff;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
   }
 
-  .input-search {
-    width: 50%;
-    margin: 10px 0;
+  .navbar .navbar-nav.active {
+    right: 0;
   }
 
-  .search-button {
-    width: 50%;
-    margin: 0;
+  .navbar .navbar-nav a {
+    color: #ffffff;
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
   }
 
-  .navbar .navbar-menu {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+    -webkit-transform: scaleX(0.2);
+    -moz-transform: scaleX(0.2);
+    -ms-transform: scaleX(0.2);
+    -o-transform: scaleX(0.2);
+  }
+
+  .navbar .search-form {
+    width: 90%;
+    right: 2rem;
   }
 
   .hero-img {
@@ -458,31 +474,6 @@ body {
 
 /* Mobile */
 @media (max-width: 480px) {
-  .navbar {
-    padding: 10px;
-    gap: 5px;
-  }
-
-  .navbar .navbar-logo {
-    font-size: 22px;
-    margin-left: 10px;
-  }
-
-  .navbar .navbar-menu a {
-    font-size: 16px;
-    margin-right: 20px;
-  }
-
-  .input-search {
-    font-size: 14px;
-    padding: 10px;
-  }
-
-  .search-button {
-    font-size: 14px;
-    height: 30px;
-  }
-
   .caption {
     font-size: 16px;
   }
