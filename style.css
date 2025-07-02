@@ -333,3 +333,52 @@ body {
   padding: 15px 10px;
   font-size: 18px;
 }
+
+.container-register{
+  margin: 5% auto;
+  color: var(--sekunder);
+  text-align: center;
+  width: 350px;
+}
+
+.register-lain {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  padding-right: 12%;
+}
+
+
+.register-lain li {
+  align-items: center;
+  display: flex;
+  width: 100%;
+  height: 50px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.register-lain li a{
+  display: flex;
+  align-items: center;
+  border: 1px solid grey;
+  margin: 0 auto;
+  padding: 5px;
+  justify-content: center;
+  width: 350px;
+  color: #000;
+  background-color:rgba(201, 201, 201, 0.6) ;
+  border-radius: 25px;
+  gap: 10px;
+  box-shadow: 2px 2px 3.5px #000;
+}
+
+.container-login p a{
+  color: #ffffff;
+}
+
+.register-lain li a img {
+  width: 35px;
+  height: 35px;
+}
