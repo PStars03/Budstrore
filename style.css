@@ -334,7 +334,7 @@ body {
   font-size: 18px;
 }
 
-.container-register{
+.container-register {
   margin: 5% auto;
   color: var(--sekunder);
   text-align: center;
@@ -349,7 +349,6 @@ body {
   padding-right: 12%;
 }
 
-
 .register-lain li {
   align-items: center;
   display: flex;
@@ -359,7 +358,7 @@ body {
   margin-top: 10px;
 }
 
-.register-lain li a{
+.register-lain li a {
   display: flex;
   align-items: center;
   border: 1px solid grey;
@@ -368,13 +367,13 @@ body {
   justify-content: center;
   width: 350px;
   color: #000;
-  background-color:rgba(201, 201, 201, 0.6);
+  background-color: rgba(201, 201, 201, 0.6);
   border-radius: 25px;
   gap: 10px;
   box-shadow: 2px 2px 3.5px #000;
 }
 
-.container-register p a{
+.container-register p a {
   color: #ffffff;
 }
 
@@ -383,11 +382,107 @@ body {
   height: 35px;
 }
 
-.container-register a{
+.container-register a {
   color: #ffffff;
 }
 
-.container-register hr{
+.container-register hr {
   border: none;
   border-top: 1px solid rgba(201, 201, 201, 0.6);
+}
+
+/* ==== RESPONSIVE DESIGN ==== */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px 20px;
+  }
+
+  .input-search {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .search-button {
+    width: 100%;
+    margin: 0;
+  }
+
+  .navbar .navbar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-img {
+    height: 300px;
+  }
+
+  .caption {
+    font-size: large;
+    top: 90%;
+  }
+
+  .container-login {
+    width: 90%;
+  }
+
+  .login-lain {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px;
+    gap: 5px;
+  }
+
+  .navbar .navbar-logo {
+    font-size: 22px;
+    margin-left: 10px;
+  }
+
+  .navbar .navbar-menu a {
+    font-size: 16px;
+    margin-right: 20px;
+  }
+
+  .input-search {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .search-button {
+    font-size: 14px;
+    height: 30px;
+  }
+
+  .caption {
+    font-size: 16px;
+  }
+
+  .container-login input {
+    width: 90%;
+  }
+
+  .container-login button {
+    width: 50%;
+  }
+
+  .login-lain li {
+    width: 40px;
+    height: 40px;
+  }
+
+  .login-lain li a img {
+    width: 25px;
+    height: 25px;
+  }
 }
