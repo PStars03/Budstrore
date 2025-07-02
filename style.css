@@ -48,11 +48,12 @@ body {
   justify-content: flex-start;
   gap: 90px;
   padding: 20px;
-  background-color: rgba(37, 58, 97, 0.75);
+  background-color: #12163a;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  z-index: 999;
 }
 
 .navbar .navbar-nav {
@@ -100,7 +101,7 @@ body {
   overflow: hidden;
   margin: 120px 20px 0 20px;
   background-size: cover;
-  background-color: rgba(37, 58, 97, 0.75);
+  background-color: #12163a;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -118,6 +119,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
 }
 
 .hero-img img.slide {
@@ -129,6 +135,11 @@ body {
   left: 0;
   opacity: 0;
   transition: opacity 1s ease-in-out;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
 }
 
 .hero-img img.active {
@@ -274,4 +285,51 @@ body {
 
 .clear-login {
   clear: both;
+}
+
+.game-section {
+  margin: 20px 20px 0 20px;
+  padding: 50px 20px;
+  background-color: #12163a;
+  text-align: center;
+}
+
+.game-section h2 {
+  color: var(--sekunder);
+  font-size: 32px;
+  font-weight: bolder;
+  margin-bottom: 30px;
+  text-shadow: 1px 2px 3px black;
+}
+
+.game-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.game-card {
+  background-color: #1e244d;
+  border-radius: 15px;
+  overflow: hidden;
+  width: 200px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.game-card:hover {
+  transform: scale(1.05);
+}
+
+.game-card img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.game-card h3 {
+  color: white;
+  padding: 15px 10px;
+  font-size: 18px;
 }
