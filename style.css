@@ -420,7 +420,7 @@ body {
 }
 
 /* Tablet */
-@media (max-width: 758px) {
+@media (max-width: 768px) {
   html {
     font-size: 62.5%;
   }
@@ -429,44 +429,28 @@ body {
     display: inline-block;
   }
 
-  .navbar .navbar-nav {
+  .navbar {
     position: absolute;
-    top: 100%;
-    right: -100%;
-    background-color: var(--primary);
-    color: #ffffff;
-    width: 30rem;
-    height: 100vh;
-    transition: 0.3s;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px 20px;
   }
 
-  .navbar .navbar-nav.active {
-    right: 0;
+  .input-search {
+    width: 50%;
+    margin: 10px 0;
   }
 
-  .navbar .navbar-nav a {
-    color: #ffffff;
-    display: block;
-    margin: 1.5rem;
-    padding: 0.5rem;
-    font-size: 2rem;
+  .search-button {
+    width: 50%;
+    margin: 0;
   }
 
-  .navbar .navbar-nav a::after {
-    transform-origin: 0 0;
-  }
-
-  .navbar .navbar-nav a:hover::after {
-    transform: scaleX(0.2);
-    -webkit-transform: scaleX(0.2);
-    -moz-transform: scaleX(0.2);
-    -ms-transform: scaleX(0.2);
-    -o-transform: scaleX(0.2);
-  }
-
-  .navbar .search-form {
-    width: 90%;
-    right: 2rem;
+  .navbar .navbar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
 
   .hero-img {
@@ -490,6 +474,31 @@ body {
 
 /* Mobile */
 @media (max-width: 480px) {
+  .navbar {
+    padding: 10px;
+    gap: 5px;
+  }
+
+  .navbar .navbar-logo {
+    font-size: 22px;
+    margin-left: 10px;
+  }
+
+  .navbar .navbar-menu a {
+    font-size: 16px;
+    margin-right: 20px;
+  }
+
+  .input-search {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .search-button {
+    font-size: 14px;
+    height: 30px;
+  }
+
   .caption {
     font-size: 16px;
   }
@@ -511,4 +520,151 @@ body {
     width: 25px;
     height: 25px;
   }
+}
+
+
+
+  margin-bottom: 10px;
+  background: #2c3e50;
+  color: white;
+}
+
+.topup-grid, .payment-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.topup-item, .payment-item {
+  background: #2d3f5e;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  border: 1px solid #3e5780;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.topup-item:hover, .payment-item:hover {
+  background-color: #3e5780;
+}
+
+.footer {
+  background: #1e2b45;
+  padding: 1rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.confirm-btn {
+  background: orange;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.confirm-btn:hover {
+  background: #f7a800;
+}
+
+/* menu  */
+
+
+.container {
+  max-width: 400px;
+  margin: auto;
+}
+
+.topbar {
+  background: #1e2b45;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  color: orange;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.card {
+  background: #1e2b45;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.card h2 {
+  font-size: 1rem;
+  color: orange;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 0.85rem;
+  color: #ccc;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 10px;
+  background: #2c3e50;
+  color: white;
+}
+
+.topup-grid, .payment-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.topup-item, .payment-item {
+  background: #2d3f5e;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  border: 1px solid #3e5780;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.topup-item:hover, .payment-item:hover {
+  background-color: #3e5780;
+}
+
+.footer {
+  background: #1e2b45;
+  padding: 1rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.confirm-btn {
+  background: orange;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.confirm-btn:hover {
+  background: #f7a800;
 }
