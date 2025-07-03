@@ -723,20 +723,16 @@ body {
   }
 
   .hero-slide {
-    height: 250px; /* fixed height untuk mobile */
-    padding: 4px;
+    height: 250px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 
   .hero-img {
     height: 100%;
-    position: relative;
   }
 
   .hero-img img.slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
     height: 100%;
     object-fit: contain;
     opacity: 0;
