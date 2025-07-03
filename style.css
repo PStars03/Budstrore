@@ -548,6 +548,107 @@ body {
   background: #f7a800;
 }
 
+/* transaksi */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #0e1628;
+  color: white;
+  padding: 20px;
+}
+
+.container {
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+}
+
+.topbar {
+  background: #1e2b45;
+  padding: 10px 15px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: orange;
+  margin-bottom: 20px;
+}
+
+.topbar h1 {
+  font-size: 1.2rem;
+}
+
+.topbar input {
+  padding: 5px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: #2c3e50;
+  color: white;
+}
+
+.checkmark {
+  font-size: 90px;
+  color: #00ff55;
+  margin: 20px 0;
+  transform: scale(0);
+  transition: transform 0.4s ease;
+}
+
+.success-text {
+  font-size: 1.2rem;
+  color: orange;
+}
+
+.amount {
+  font-size: 2rem;
+  color: orange;
+  margin-bottom: 20px;
+}
+
+.details {
+  text-align: left;
+  background: #1e2b45;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.details p {
+  margin: 10px 0;
+  font-size: 0.95rem;
+}
+
+.details span {
+  display: inline-block;
+  width: 150px;
+  font-weight: bold;
+  color: orange;
+}
+
+.back-btn {
+  display: block;
+  width: 100%;
+  background: orange;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 12px;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+.back-btn:hover {
+  background: #f7a800;
+}
+
+
+
 /* ==== RESPONSIVE DESIGN ==== */
 
 @media (max-width: 1366px) {
