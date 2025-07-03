@@ -793,4 +793,9 @@ body {
   .game-section h2 {
     font-size: 2.4rem;
   }
+
+  .container-login {
+    width: auto;
+    height: auto;
+  }
 }
