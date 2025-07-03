@@ -336,9 +336,16 @@ body {
   background-color: #1e244d;
   border-radius: 15px;
   overflow: hidden;
-  width: 200px;
+  flex: 1 1 calc(25% - 20px);
+  max-width: calc(25% - 20px);
+  min-width: 150px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease;
+}
+.game-card img {
+  width: 25%;
+  height: auto;
+  object-fit: cover;
 }
 
 .game-card:hover {
@@ -624,6 +631,15 @@ body {
   html {
     font-size: 75%;
   }
+  .game-card {
+    flex: 1 1 calc(33.33% - 20px); /* 3 kolom */
+    max-width: calc(33.33% - 20px);
+  }
+
+  .topup-grid,
+  .payment-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* Tablet */
@@ -682,24 +698,58 @@ body {
     top: 90%;
   }
 
-  .container-login {
-    width: 90%;
-  }
-
   .login-lain {
     flex-direction: column;
     gap: 10px;
+  }
+
+  .container-login,
+  .container-register,
+  .container-transaksi {
+    width: 90%;
+  }
+
+  .game-card {
+    flex: 1 1 calc(50% - 20px); /* 2 kolom */
+    max-width: calc(50% - 20px);
   }
 }
 
 /* Mobile */
 @media (max-width: 480px) {
-  .caption {
-    font-size: 16px;
+  .game-card {
+    flex: 1 1 100%; /* 1 kolom */
+    max-width: 100%;
   }
 
-  .container-login input {
-    width: 90%;
+  .hero-slide {
+    height: 300px; /* fixed height untuk mobile */
+    padding: 1rem;
+  }
+
+  .hero-img {
+    height: 100%;
+    position: relative;
+  }
+
+  .hero-img img.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+
+  .hero-img img.active {
+    opacity: 1;
+    z-index: 2;
+  }
+
+  .caption {
+    font-size: 16px;
   }
 
   .container-login button {
@@ -711,9 +761,10 @@ body {
     height: 40px;
   }
 
-  .login-lain li a img {
-    width: 25px;
-    height: 25px;
+  .login-lain li a img,
+  .register-lain li a img {
+    width: 30px;
+    height: 30px;
   }
 
   #registerForm {
@@ -723,5 +774,27 @@ body {
 
   .input-regiter {
     font-size: 14px;
+  }
+  .navbar-logo {
+    font-size: 2rem;
+  }
+
+  .search-form {
+    width: 90%;
+    right: 1rem;
+  }
+
+  .container-login input,
+  .input-regiter,
+  .input-idpemain {
+    width: 100%;
+  }
+
+  .container-login button,
+  #registerForm .btn-register {
+    width: 100%;
+  }
+  .game-section h2 {
+    font-size: 2.4rem;
   }
 }
