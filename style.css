@@ -797,5 +797,12 @@ body {
   .container-login {
     width: auto;
     height: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .logo-login {
+    margin-top: 80px;
+    margin-bottom: 10px;
   }
 }
