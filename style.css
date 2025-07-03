@@ -549,55 +549,26 @@ body {
 }
 
 /* transaksi */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
-}
-
-body {
+.bd-transaksi {
   background-color: #0e1628;
   color: white;
   padding: 20px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.container {
+.container-transaksi {
   max-width: 400px;
   margin: auto;
   text-align: center;
 }
 
-.topbar {
-  background: #1e2b45;
-  padding: 10px 15px;
-  border-radius: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: orange;
-  margin-bottom: 20px;
-}
-
-.topbar h1 {
-  font-size: 1.2rem;
-}
-
-.topbar input {
-  padding: 5px;
-  border-radius: 8px;
-  border: none;
-  outline: none;
-  background: #2c3e50;
-  color: white;
-}
-
 .checkmark {
+  z-index: 999;
   font-size: 90px;
   color: #00ff55;
-  margin: 20px 0;
-  transform: scale(0);
-  transition: transform 0.4s ease;
+  margin-top: 120px;
 }
 
 .success-text {
@@ -646,8 +617,6 @@ body {
 .back-btn:hover {
   background: #f7a800;
 }
-
-
 
 /* ==== RESPONSIVE DESIGN ==== */
 

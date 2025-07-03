@@ -1,34 +1,60 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bukti Transaksi Top Up</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <div class="container">
-    <header class="topbar">
-      <div class="menu">☰</div>
-      <h1>BUDSTORE</h1>
-      <div class="icons">
-        <input type="text" placeholder="Search..." />
-        <span>🛒</span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="asset/logo.jpg" type="image/x-icon"/>
+    <title>Bukti Transaksi Top Up</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+  <body class="bd-transaksi">
+    <nav class="navbar">
+      <a href="index.html" class="navbar-logo">BUD<span>STORE</span></a>
+
+      <div class="navbar-nav">
+        <a href="index.html">Home</a>
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
       </div>
-    </header>
 
-    <div class="checkmark">✅</div>
+      <div class="navbar-extra">
+        <a href="#" id="search-button"><i data-feather="search"></i></a>
+        <a href="#"><i data-feather="user"></i></a>
+        <a href="#" id="shopping-cart-button"
+          ><i data-feather="shopping-cart"></i
+        ></a>
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
+      <!-- Search Form start -->
+      <div class="search-form">
+        <input type="search" id="search-box" placeholder="search here..." />
+        <label for="search-box"><i data-feather="search"></i></label>
+      </div>
+    </nav>
 
-    <h2 class="success-text">Pembayaran berhasil!</h2>
-    <h3 class="amount" id="amount">IDR 0</h3>
 
-    <div class="details" id="details">
-      <!-- Akan diisi oleh JS -->
+    <div class="container-transaksi">
+
+      <div class="checkmark">✅</div>
+      
+      <h2 class="success-text">Pembayaran berhasil!</h2>
+      <h3 class="amount" id="amount">IDR 0</h3>
+      
+      <div class="details" id="details">
+        <!-- Akan diisi oleh JS -->
+      </div>
+      
+      <a href="index.html" class="back-btn">← Back to beranda</a>
     </div>
-
-    <a href="index.html" class="back-btn">← Back to beranda</a>
   </div>
 
-  <script src="script.js"></script>
-</body>
+    <script>
+      feather.replace();
+      </script>
+
+<script src="transaksi.js"></script>
+<script src="index.js"></script>
+<script src="after_login.js"></script>
+  </body>
 </html>

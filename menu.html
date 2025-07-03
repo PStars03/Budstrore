@@ -35,7 +35,7 @@
     <!-- Masukkan ID Game -->
     <section class="card id">
       <h2>🎮 Masukkan ID Game</h2>
-      <input class="input-idpemain" type="text" placeholder="123456789 (ID Game)" />
+      <input id="input-idpemain" class="input-idpemain" type="text" placeholder="123456789 (ID Game)" />
       <p>Untuk mengetahui ID pengguna Anda, silakan masuk ke dalam game dan temukan ID pengguna Anda di profil Anda.</p>
     </section>
 
@@ -43,14 +43,14 @@
     <section class="card">
       <h2>💎 Pilihan Top Up</h2>
       <div class="topup-grid">
-        <button class="topup-item">86 Diamonds</button>
-        <button class="topup-item">172 Diamonds</button>
-        <button class="topup-item">257 Diamonds</button>
-        <button class="topup-item">344 Diamonds</button>
-        <button class="topup-item">429 Diamonds</button>
-        <button class="topup-item">514 Diamonds</button>
-        <button class="topup-item">600 Diamonds</button>
-        <button class="topup-item">706 Diamonds</button>
+        <button data-diamond="86 Diamonds" data-harga="10000" class="topup-item">86 Diamonds</button>
+        <button data-diamond="172 Diamonds" data-harga="20000" class="topup-item">172 Diamonds</button>
+        <button data-diamond="257 Diamonds" data-harga="30000" class="topup-item">257 Diamonds</button>
+        <button data-diamond="344 Diamonds" data-harga="40000" class="topup-item">344 Diamonds</button>
+        <button data-diamond="429 Diamonds" data-harga="50000" class="topup-item">429 Diamonds</button>
+        <button data-diamond="514 Diamonds" data-harga="60000" class="topup-item">514 Diamonds</button>
+        <button data-diamond="600 Diamonds" data-harga="70000" class="topup-item">600 Diamonds</button>
+        <button data-diamond="706 Diamonds" data-harga="80000" class="topup-item">706 Diamonds</button>
       </div>
     </section>
 
@@ -58,22 +58,22 @@
     <section class="card">
       <h2>💳 Metode Pembayaran</h2>
       <div class="payment-grid">
-        <div class="payment-item">Gopay</div>
-        <div class="payment-item">Dana</div>
-        <div class="payment-item">QRIS</div>
-        <div class="payment-item">ShopeePay</div>
-        <div class="payment-item">Alfamart</div>
-        <div class="payment-item">OVO</div>
-        <div class="payment-item">BRI</div>
-        <div class="payment-item">BNI</div>
-        <div class="payment-item">BCA</div>
+        <div data-metode="Gopay" class="payment-item">Gopay</div>
+        <div data-metode="Dana" class="payment-item">Dana</div>
+        <div data-metode="QRIS" class="payment-item">QRIS</div>
+        <div data-metode="ShopeePay" class="payment-item">ShopeePay</div>
+        <div data-metode="Alfamart" class="payment-item">Alfamart</div>
+        <div data-metode="OVO" class="payment-item">OVO</div>
+        <div data-metode="BRI" class="payment-item">BRI</div>
+        <div data-metode="BNI" class="payment-item">BNI</div>
+        <div data-metode="BCA" class="payment-item">BCA</div>
       </div>
     </section>
 
     <!-- Konfirmasi -->
     <section class="footer">
       <label><input type="checkbox" /> Saya setuju dengan syarat & ketentuan</label>
-      <button class="confirm-btn">💰 Beli</button>
+      <button id="btn-beli" class="confirm-btn">💰 Beli</button>
     </section>
   </div>
 
@@ -83,5 +83,6 @@
   
   <script src="index.js"></script>
   <script src="after_login.js"></script>
+  <script src="menu.js"></script>
 </body>
 </html>
